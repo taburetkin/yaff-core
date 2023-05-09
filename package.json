@@ -1,0 +1,17 @@
+{
+  "name": "yaff-core",
+  "version": "1.0.0",
+  "description": "common utils pack for yaff",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test-start": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll",
+    "jest-init": "jest --init"
+  },
+  "author": "dimtabu<dima.taburetkin@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
