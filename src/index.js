@@ -5,3 +5,5 @@ export { knownCtors, isKnownCtor } from './knownCtors.js';
 export { invokeValue } from './invokeValue.js';
 export { isClass } from './isClass.js';
 export { debounce } from './debounce.js';
+export { domApi } from './domApi.js';
+export { configuration, getConfigurationValue } from './configuration.js';

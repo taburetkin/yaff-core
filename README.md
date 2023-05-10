@@ -1,2 +1,4 @@
 # yaff-core
-common utils pack for yaff packages
+common things pack for yaff packages
+
+## Named exports
