@@ -13,3 +13,7 @@ common things pack for yaff packages
 - takeFirst
 - isClass
 - debounce
+
+
+----------
+[yaff repo link](https://github.com/taburetkin/yaff)
