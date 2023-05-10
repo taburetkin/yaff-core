@@ -2,3 +2,14 @@
 common things pack for yaff packages
 
 ## Named exports
+### Main things
+- configuration, getConfigurationValue
+- domApi
+- knownCtors, isKnownCtor
+- invokeValue
+- extend
+### Other stuff
+- uniqueId
+- takeFirst
+- isClass
+- debounce
