@@ -26,26 +26,27 @@ export const domApi = {
 		el.innerHTML = templateFunc(templateContext);
 	},
 
-	events: {
-		off(el, event, ns, selector, handler) {
-			throw new Error('domApi.events.off(el, event, namespace, selector, handler) not implemented');
-		},
-		on(el, event, ns, selector, handler) {
-			throw new Error('domApi.events.on(el, event, namespace, selector, handler) not implemented');
-		}
-	},
+	// events: {
+	// 	off(el, event, ns, selector, handler) {
+	// 		throw new Error('domApi.events.off(el, event, namespace, selector, handler) not implemented');
+	// 	},
+	// 	on(el, event, ns, selector, handler) {
+	// 		throw new Error('domApi.events.on(el, event, namespace, selector, handler) not implemented');
+	// 	}
+	// },
 
-	buildTemplate() {
-		throw new Error('domApi.buildTemplate(arg) not implemented')
-	},
+	// buildTemplate(arg) {
+	// 	throw new Error('domApi.buildTemplate(arg) not implemented')
+	// },
 
 	findChildElement(el, selector) {
+		if (typeof selector !== 'string') { return selector; }
 		selector = normalizeSelector(selector);
 		const child = el.querySelector(selector);
 		return child;
 	},
 
-	attachElement(elementToAttach, anchorElement, attachType = 'append', attachIndex) {
+	attachElement(elementToAttach, anchorElement, attachType, attachIndex) {
 
 		if ((attachType === 'before' || attachType === 'after') && attachIndex >= 0) {
 			return this.attachElementByIndex(elementToAttach, anchorElement, attachType, attachIndex);
@@ -96,7 +97,7 @@ export const domApi = {
 
 
 function normalizeSelector(selector) {
-	if (!selector) { return selector; }
+	
 	if (selector.trim().startsWith('>')) {
 		selector = ':scope ' + selector;
 	}
